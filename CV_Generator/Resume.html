@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style.css">
+    <title>Resume generator</title>
+</head>
+
+<body>
+
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-5">Resume generatoras</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Personal Information</h3>
+                <div class="form-group">
+                    <label for="nameFiald">Name</label>
+                    <input type="text" id="nameFiald" placeholder="Enter you name." class="form-control" />
+                </div>
+                <div class="form-group mt-2">
+                    <label for="phonenoFiald">Phone no</label>
+                    <input type="text" id="phonenoFiald" placeholder="Enter you phone no." class="form-control" />
+                </div>
+                <div class="form-group mt-2">
+                    <label for="addressFiald">Address</label>
+                    <textarea type="text" id="addressFiald" placeholder="Enter you address."
+                        class="form-control"></textarea>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="">Select your photo.</label>
+                    <input id="imgField" type="file" class="form-control">
+                </div>
+                <p class="text-secondry mt-3"> Impotant links</p>
+                <div class="form-group">
+                    <label for="fbFiald">Facebook</label>
+                    <input type="text" id="fbFiald" placeholder="Enter here." class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="insFiald">Instagram</label>
+                    <input type="text" id="insFiald" placeholder="Enter here." class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="ldFiald">LinkedIn</label>
+                    <input type="text" id="ldFiald" placeholder="Enter here." class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Professional Information</h3>
+                <div class="form-group mt-2">
+                    <label for="">Objective</label>
+                    <textarea type="text" id="obFiald" placeholder="Enter you address." class="form-control"></textarea>
+                </div>
+                <div class="form-group mt-2" id="we">
+                    <label for="">Work Experience</label>
+                    <textarea type="text" placeholder="Enter you address." class="form-control weField"></textarea>
+                    <div class="container text-center mt-3" id="weAddbutton">
+                        <button onclick="AddNewweField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                    <!-- new textarea -->
+                    <div class="form-group mt-2" id="skil">
+                        <label for="">Skil</label>
+                        <textarea type="text" placeholder="Enter you skil." class="form-control skilField">
+                        </textarea>
+                        <div class="container text-center mt-3" id="skilAddbutton">
+                            <button onclick="AddNewskilField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+                    <div class="form-group mt-2" id="eq">
+                        <label for="">Academic Quilification</label>
+                        <textarea type="text" placeholder="Enter you address." class="form-control eqField"></textarea>
+                        <div class="container text-center mt-3" id="eqAddbutton">
+                            <button onclick="AddNeweqfield()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container text-center mt-3">
+                    <button onclick="generatecv()" class="btn btn-primary btn-lg">CV Generate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cv template -->
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center my-5 bg">
+                <!-- first-column -->
+                <img src="AA.jpg" alt="" class="img-fluid myimg" id="imgt" />
+                <div class="container">
+                    <p id="namet">Vishesh kumar yadav</p>
+                    <p id="phonet">+919570305507,+918092215481</p>
+                    <p id="addresst">Noida sec-15,UP</p>
+                    <hr />
+                    <p id="fbt"><a href="#1">https://www.facebook.com/visheshkumaryadav</a></p>
+                    <p id="inst"><a href="#1">https://www.Instagram.com/visheshkumaryadav</a></p>
+                    <p id="ldt"><a href="#1">https://www.LinkedIn.com/visheshkumaryadav</a></p>
+                </div>
+            </div>
+            <div class="col-md-8 py-5">
+                <!-- second-column -->
+                <h1 id="namet1" class="text-center" style="font-weight: 980px;">Vishesh kumar yadav</h1>
+                <!-- objective -->
+                <div class="card mt-4">
+                    <div class="card-header" style="background: aqua;">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita possimus eum
+                            iusto
+                            perferendis doloribus ipsam veniam adipisci recusandae quisquam id, quia eveniet earum
+                            veritatis ipsum. Dolore eius nesciunt blanditiis animi, minima culpa aliquid, aperiam
+                            laudantium quaerat similique velit impedit fuga facilis, eum ex illo consequatur veniam
+                            cupiditate? Adipisci doloribus laboriosam nulla saepe, ut, fuga alias quis sit magnam
+                            explicabo facere natus laborum soluta. Perspiciatis eaque possimus consequatur et
+                            voluptatibus nobis reiciendis assumenda laborum exercitationem magni inventore itaque
+                            doloremque, minima explicabo, vitae, reprehenderit a deserunt modi. Harum mollitia non
+                            debitis placeat rerum deleniti enim quam doloribus veritatis iusto, ipsum eum voluptates.
+                        </p>
+                    </div>
+                </div>
+                <!-- Work experience -->
+                <div class="card mt-4">
+                    <div class="card-header" style="background: aqua;">
+                        <h3>Work experience </h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="wet">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptatem.</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptatem.</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptatem.</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <!-- skil -->
+                <div class="card mt-4">
+                    <div class="card-header" style="background: aqua;">
+                        <h3>Skil </h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="skilt">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptatem.</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptatem.</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptatem.</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <!-- Academic quilification -->
+                <div class="card mt-4">
+                    <div class="card-header" style="background: aqua;">
+                        <h3>Academic quilification </h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="eqt">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptatem.</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptatem.</li>
+
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptatem.</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="container mt-4 text-center">
+                    <button onclick="printcv()" style="background: aqua;">Print cv</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="Script.js"></script>
+</body>
+
+</html>

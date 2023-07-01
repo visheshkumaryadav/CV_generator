@@ -1,0 +1,12 @@
+
+.myimg{
+    /* border: 2px so red; */
+    border-radius: 50%;
+    width: 200px;  
+}
+.bg{
+    background-color: aquamarine;
+}
+#cv-template{
+    display: none;
+}
